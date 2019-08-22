@@ -6,22 +6,37 @@ import './App.css';
 function App() {
   const [color, setColor] = useState("blue");
   const [choice, setChoice] = useState("");
+  const _colors = ["red", "blue", "yellow", "green"]
 
   const handleKeyDown = (e) => {
-    if (e.key === " "){
-      shuffleColors()
-    } 
+    switch (e.key) {
+      case " ":
+        shuffleColors()
+        break;
+      case "1":
+        setChoice(_colors[0])
+        break;
+      case "2":
+        setChoice(_colors[1])
+        break;
+      case "3":
+        setChoice(_colors[2])
+        break;
+      case "4":
+        setChoice(_colors[3])
+        break;
+      default:
+        console.log('How did this happen?')
+    }
   }
 
   const shuffleColors = () => {
-    let colors = ["red", "blue", "yellow", "green"]
-    let rngIdx = Math.floor(Math.random() * colors.length)
-    setColor(colors[rngIdx])
+    let rngIdx = Math.floor(Math.random() * _colors.length)
+    setColor(_colors[rngIdx])
   }
 
   const answerButtons = () => {
-    let colors = ["red", "blue", "yellow", "green"]
-    return colors.map((color, idx) => <div key={color}>{idx + 1}. {color}</div>)
+    return _colors.map((color, idx) => <div key={color}>{idx + 1}. {color}</div>)
   }
 
   return (
@@ -30,6 +45,10 @@ function App() {
       <br />
       <div>CHOICES
         {answerButtons()}
+      </div>
+      <br />
+      <div>CHOICE
+        <div>{choice}</div>
       </div>
     </div>
   );
