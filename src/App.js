@@ -6,6 +6,8 @@ import './App.css';
 function App() {
   const [color, setColor] = useState("blue");
   const [choice, setChoice] = useState("");
+  const [result, setResult] = useState("");
+
   const _colors = ["red", "blue", "yellow", "green"]
 
   const handleKeyDown = (e) => {
@@ -15,18 +17,22 @@ function App() {
         break;
       case "1":
         setChoice(_colors[0])
+        checkAnswer()
         break;
       case "2":
         setChoice(_colors[1])
+        checkAnswer()
         break;
       case "3":
         setChoice(_colors[2])
+        checkAnswer()
         break;
       case "4":
         setChoice(_colors[3])
+        checkAnswer()
         break;
       default:
-        console.log('How did this happen?')
+        console.log('Default')
     }
   }
 
@@ -39,6 +45,14 @@ function App() {
     return _colors.map((color, idx) => <div key={color}>{idx + 1}. {color}</div>)
   }
 
+  const checkAnswer = () => {
+    if (choice === color) {
+      setResult("Correct")
+    } else {
+      setResult("Incorrect")
+    }
+  }
+
   return (
     <div className="App" onKeyDown={handleKeyDown} tabIndex="1">
       <div>Color: {color}</div>
@@ -49,6 +63,9 @@ function App() {
       <br />
       <div>CHOICE
         <div>{choice}</div>
+      </div>
+      <div>RESULT
+        <div>{result}</div>
       </div>
     </div>
   );
