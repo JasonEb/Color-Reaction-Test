@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/color-reaction-test/static/css/main.2cce8147.chunk.css",
+    "main.js": "/color-reaction-test/static/js/main.36cfcd48.chunk.js",
+    "main.js.map": "/color-reaction-test/static/js/main.36cfcd48.chunk.js.map",
+    "runtime~main.js": "/color-reaction-test/static/js/runtime~main.364b738a.js",
+    "runtime~main.js.map": "/color-reaction-test/static/js/runtime~main.364b738a.js.map",
+    "static/js/2.19a5471a.chunk.js": "/color-reaction-test/static/js/2.19a5471a.chunk.js",
+    "static/js/2.19a5471a.chunk.js.map": "/color-reaction-test/static/js/2.19a5471a.chunk.js.map",
+    "index.html": "/color-reaction-test/index.html",
+    "precache-manifest.4d95ebcd4fd1e9bb31c0ac56a69fe9bc.js": "/color-reaction-test/precache-manifest.4d95ebcd4fd1e9bb31c0ac56a69fe9bc.js",
+    "service-worker.js": "/color-reaction-test/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/color-reaction-test/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/color-reaction-test/static/media/logo.5d5d9eef.svg"
+  }
+}
