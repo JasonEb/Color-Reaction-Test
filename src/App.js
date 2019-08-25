@@ -17,19 +17,15 @@ function App() {
         break;
       case "1":
         setChoice(_colors[0])
-        checkAnswer()
         break;
       case "2":
         setChoice(_colors[1])
-        checkAnswer()
         break;
       case "3":
         setChoice(_colors[2])
-        checkAnswer()
         break;
       case "4":
         setChoice(_colors[3])
-        checkAnswer()
         break;
       default:
         console.log('Default')
@@ -52,6 +48,11 @@ function App() {
       setResult("Incorrect")
     }
   }
+
+  //useEffects
+  useEffect(()=>{
+    checkAnswer()
+  }, [choice])
 
   return (
     <div className="App" onKeyDown={handleKeyDown} tabIndex="1">
